@@ -50,22 +50,33 @@ namespace OnEgitim6
             int urunFiyati = products[0].productPrice;
             lstList.Items.Add(urunAdi + "/" + urunAdedi + "-" + urunFiyati);
         }
-        
-        
+
+
+        List<Product> urunlistesi = new List<Product>();
 
         private void btnDiziyeAktar_Click(object sender, EventArgs e)
         {
+            string[] urunlistesi = new string[1];
+            
+            for (int  i= 0; i <= products.Count; i++) ;
+            {
+
+                string urunadi = products[0].productName;
+                //bunu ben ekledim kendi oluşturduğum urunadi array yapısına ne geldiğini göebilmek için. (melek)
+                lstList.Items.Add(urunadi);
+
+
+            }
             
 
+            
+           
 
 
         }
 
         private void btnElemanSayisi_Click(object sender, EventArgs e)
         {
-            //ürünün adını product listin içinden okuyacak 
-            urun.productName = txtPName.Text;
-            products[sayac] = urun.productName;
         }
     }
 }
