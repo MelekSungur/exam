@@ -57,11 +57,11 @@ namespace OnEgitim6
         private void btnDiziyeAktar_Click(object sender, EventArgs e)
         {
             string[] urunlistesi = new string[1];
-            
+            string urunadi = products[0].productName;
             for (int  i= 0; i <= products.Count; i++) ;
             {
 
-                string urunadi = products[0].productName;
+                
                 //bunu ben ekledim kendi oluşturduğum urunadi array yapısına ne geldiğini göebilmek için. (melek)
                 lstList.Items.Add(urunadi);
 
@@ -77,6 +77,10 @@ namespace OnEgitim6
 
         private void btnElemanSayisi_Click(object sender, EventArgs e)
         {
+            int elemansayisi = (products.Count) - 1;
+
+            MessageBox.Show("listede Bulunan Eleman Sayısı" + elemansayisi);
+
         }
     }
 }
